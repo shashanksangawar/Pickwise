@@ -62,5 +62,4 @@ router.post("/admin/register", async function(request, response)
     }
 });
 
-
 module.exports = router;

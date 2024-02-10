@@ -1,5 +1,7 @@
 CREATE DATABASE PICKWISE;
 
+USE PICKWISE;
+
 -- 1.
 CREATE TABLE users(
     UserId INT AUTO_INCREMENT PRIMARY KEY,
@@ -12,7 +14,7 @@ CREATE TABLE users(
 -- 2.
 CREATE TABLE categories(
     CategoryId INT AUTO_INCREMENT PRIMARY KEY,
-    CategoryName VARCHAR(100) NOT NULL,
+    CategoryName VARCHAR(100) NOT NULL
 );
 
 --3.
@@ -36,8 +38,8 @@ CREATE TABLE reviews(
     ProductID INT NOT NULL,
     Rating VARCHAR(2) NOT NULL,
     Comments VARCHAR(255) NOT NULL,
-    Timestamp DATE NOT NULL
-    FOREIGN KEY (ProductID) REFERENCES products(ProductId)
+    Timestamp DATE NOT NULL,
+    FOREIGN KEY (ProductID) REFERENCES products(ProductId),
     FOREIGN KEY (UserID) REFERENCES users(UserId)
 );
 

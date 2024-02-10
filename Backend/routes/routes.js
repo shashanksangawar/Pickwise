@@ -33,11 +33,11 @@ router.post("/login", async function(request, response)
 // Register
 router.post("/register", async function(request, response)
 {
-    const { username, email, password } = request.body;
+    const request_body = request.body;
+    const {name, email, password} = request.body
     try 
     {
-        const registrationResult = await accountCreate.register(username, email, password);
-
+        const registrationResult = await accountCreate.register(name, email, password);
         // Check the return code to determine success or failure
         if (registrationResult.returncode === 0)
         {
