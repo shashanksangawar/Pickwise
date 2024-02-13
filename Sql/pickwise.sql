@@ -26,7 +26,7 @@ CREATE TABLE products(
     Description VARCHAR(255) NOT NULL,
     Price VARCHAR(20) NOT NULL,
     Company VARCHAR(100) NOT NULL,
-    Ratings VARCHAR(2) NOT NULL,
+    Ratings VARCHAR(5) NOT NULL,
     Image LONGBLOB NOT NULL,
     FOREIGN KEY (CategoryID) REFERENCES categories(CategoryId)
 );
