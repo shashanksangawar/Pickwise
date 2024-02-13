@@ -21,6 +21,7 @@ CREATE TABLE categories(
 CREATE TABLE products(
     ProductId INT AUTO_INCREMENT PRIMARY KEY,
     CategoryID INT NOT NULL,
+    SubCategoryName VARCHAR(100) NOT NULL,
     Title VARCHAR(100) NOT NULL,
     Description VARCHAR(255) NOT NULL,
     Price VARCHAR(20) NOT NULL,
