@@ -151,7 +151,7 @@ const products = () =>
               reject({'returncode': 1, 'message': err, 'output': []});
               return;
             }
-            const query = 'SELECT * FROM products;';
+            const query = 'SELECT * FROM products p, categories c WHERE p.CategoryID = c.CategoryId;';
             connection.query(query, (queryError, results) => {
             connection.release();
     
